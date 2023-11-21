@@ -1,7 +1,5 @@
 # Simple Quote Generator App
 
-![Screenshot](screenshot.png)
-
 ## Overview
 
 The Simple Quote Generator App is a minimalistic application that generates random quotes to inspire and motivate users. It's a fun and straightforward project suitable for beginners and serves as a practical exercise to reinforce JavaScript concepts.
