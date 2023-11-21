@@ -1,6 +1,6 @@
 # Simple Quote Generator App
 
-![App Screenshot](/screenshot.png)
+![App Screenshot](./screenshot.png)
 
 ## Overview
 
