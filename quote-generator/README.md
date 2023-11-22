@@ -1,5 +1,7 @@
 # Simple Quote Generator App
 
+<img width="960" alt="qoute-generator-scr" src="https://github.com/VenkatRaman3103/javascript-projects/assets/145652521/9accceda-99e6-4bc3-b256-3d51078575cc">
+
 ## Overview
 
 The Simple Quote Generator App is a minimalistic application that generates random quotes to inspire and motivate users. It's a fun and straightforward project suitable for beginners and serves as a practical exercise to reinforce JavaScript concepts.
@@ -19,10 +21,3 @@ This project was developed as part of a JavaScript learning journey. Key learnin
 -   Implementing event handling in JavaScript.
 -   Practicing asynchronous programming concepts.
 
-### Customize
-
--   You can customize the list of quotes by editing the `script.js` file.
-
----
-
-Feel free to customize further based on additional features or improvements you make to your project. Adding details about the Twitter sharing feature helps users understand the full functionality of your app.
