@@ -29,9 +29,9 @@ This is a simple web application that displays an infinite scroll photo gallery 
 
 2. Open the project folder:
 
-```bash
-cd infinite-scroll-photo-gallery
-```
+   ```bash
+   cd infinite-scroll-photo-gallery
+   ```
 
 3. Open the index.html file in your preferred web browser.
 
