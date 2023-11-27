@@ -110,10 +110,14 @@ const VoiceRSS = {
     },
 };
 
-function test() {
+function toggleButton() {
+    button.disabled = !button.disabled;
+}
+
+function test(jokes) {
     VoiceRSS.speech({
         key: "7caced25ce2e4618b3ff2b5602e0c7be",
-        src: "Hello, world!",
+        src:jokes,
         hl: "en-us",
         v: "Linda",
         r: 0,
@@ -125,10 +129,16 @@ function test() {
 
 test();
 
-async function apiTest(){
-    const url = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single'
-    const response = await fetch(url)
-    console.log(await response.json())
+async function getJokes() {
+    let jokes;
+    const url =
+        "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
+    const response = await fetch(url);
+    const data = await response.json();
+    jokes = data.joke;
+    test(jokes);
+    toggleButton();
 }
 
-apiTest()
+button.addEventListener("click", getJokes);
+audioElement.addEventListener("ended", toggleButton);

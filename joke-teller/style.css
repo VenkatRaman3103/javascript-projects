@@ -43,7 +43,7 @@ button:hover{
 }
 
 button:active{
-    transform: scale(0.08);
+    transform: scale(0.98);
 }
 
 button:disabled{
