@@ -1,5 +1,5 @@
-const button = document.getElementById('button')
-const audio = document.getElementById('audio')
+const button = document.getElementById("button");
+const audioElement = document.getElementById("audio");
 
 // VoiceRSS Javascript SDK
 const VoiceRSS = {
@@ -40,7 +40,10 @@ const VoiceRSS = {
         (t.onreadystatechange = function () {
             if (4 == t.readyState && 200 == t.status) {
                 if (0 == t.responseText.indexOf("ERROR")) throw t.responseText;
-                (audioElement.src = t.responseText), audioElement.play();
+                // (audioElement.src = t.responseText), audioElement.play();
+                // new Audio(t.responseText).play()
+                audioElement.src = t.responseText;
+                audioElement.play();
             }
         }),
             t.open("POST", "https://api.voicerss.org/", !0),
@@ -107,17 +110,25 @@ const VoiceRSS = {
     },
 };
 
-function test(){
+function test() {
     VoiceRSS.speech({
-        key: '7caced25ce2e4618b3ff2b5602e0c7be',
-        src: 'Hello, world!',
-        hl: 'en-us',
-        v: 'Linda',
-        r: 0, 
-        c: 'mp3',
-        f: '44khz_16bit_stereo',
-        ssml: false
-})
+        key: "7caced25ce2e4618b3ff2b5602e0c7be",
+        src: "Hello, world!",
+        hl: "en-us",
+        v: "Linda",
+        r: 0,
+        c: "mp3",
+        f: "44khz_16bit_stereo",
+        ssml: false,
+    });
 }
 
-test()
+test();
+
+async function apiTest(){
+    const url = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single'
+    const response = await fetch(url)
+    console.log(await response.json())
+}
+
+apiTest()
