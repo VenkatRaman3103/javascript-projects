@@ -37,9 +37,9 @@ To run this project locally, follow these steps:
 
 To use this project, you need to obtain a VoiceRSS API key. Replace the placeholder API key in the `tellMe` function with your own key:
 
-    ```javascript
-    key: "your-voice-rss-api-key",
-    ```
+```javascript
+key: "your-voice-rss-api-key",
+```
 
 ## API Reference
 - JokeAPI: https://sv443.net/jokeapi/
