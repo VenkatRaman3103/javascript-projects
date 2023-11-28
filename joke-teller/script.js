@@ -40,10 +40,7 @@ const VoiceRSS = {
         (t.onreadystatechange = function () {
             if (4 == t.readyState && 200 == t.status) {
                 if (0 == t.responseText.indexOf("ERROR")) throw t.responseText;
-                // (audioElement.src = t.responseText), audioElement.play();
-                // new Audio(t.responseText).play()
-                audioElement.src = t.responseText;
-                audioElement.play();
+                (audioElement.src = t.responseText), audioElement.play();
             }
         }),
             t.open("POST", "https://api.voicerss.org/", !0),
@@ -114,30 +111,33 @@ function toggleButton() {
     button.disabled = !button.disabled;
 }
 
-function test(jokes) {
+function tellMe(joke) {
+    const jokeString = joke.trim().replace(/ /g, "%20");
     VoiceRSS.speech({
-        key: "7caced25ce2e4618b3ff2b5602e0c7be",
-        src:jokes,
+        key: "da23650f88c44ef0b88e8f1b7d674ba1",
+        src: jokeString,
         hl: "en-us",
-        v: "Linda",
         r: 0,
         c: "mp3",
         f: "44khz_16bit_stereo",
         ssml: false,
     });
 }
-
-test();
-
 async function getJokes() {
-    let jokes;
-    const url =
-        "https://v2.jokeapi.dev/joke/Any?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=single";
-    const response = await fetch(url);
-    const data = await response.json();
-    jokes = data.joke;
-    test(jokes);
-    toggleButton();
+    let joke = "";
+    const apiUrl =
+        "https://sv443.net/jokeapi/v2/joke/Programming?blacklistFlags=nsfw,racist,sexist";
+    try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        if (data.setup) {
+            joke = `${data.setup} ... ${data.delivery}`;
+        } else {
+            joke = data.joke;
+        }
+        tellMe(joke);
+        toggleButton();
+    } catch (error) {}
 }
 
 button.addEventListener("click", getJokes);
