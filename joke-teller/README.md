@@ -1,5 +1,7 @@
 # Joke Teller
+<img width="960" alt="Screenshot 2023-11-28 092837" src="https://github.com/VenkatRaman3103/javascript-projects/assets/145652521/4a23176d-8a2b-4a27-ab27-cda11862488f">
 
+## Overview
 Joke Teller is a web application that fetches programming-related jokes from an API and converts them into audio using the VoiceRSS API. Users can click a button to hear a random joke.
 
 ## Features
