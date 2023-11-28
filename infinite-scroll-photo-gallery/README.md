@@ -1,5 +1,11 @@
 # Infinite Scroll Photo Gallery
+<div align="center">
+<img width="288" alt="Screenshot 2023-11-26 235121" src="https://github.com/VenkatRaman3103/javascript-projects/assets/145652521/9b4981fc-8c42-437e-8c69-5cdc97bc7b5c">
 
+<img width="288" alt="Screenshot 2023-11-26 235128" src="https://github.com/VenkatRaman3103/javascript-projects/assets/145652521/80862cb8-d5ec-4026-8168-fad97123c749">
+</div>
+
+## Overview
 This is a simple web application that displays an infinite scroll photo gallery using the Unsplash API. As you scroll down the page, new images are dynamically loaded and added to the display.
 
 ## Table of Contents
@@ -8,8 +14,6 @@ This is a simple web application that displays an infinite scroll photo gallery 
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies-used)
-- [License](#license)
 
 ## Demo
 
